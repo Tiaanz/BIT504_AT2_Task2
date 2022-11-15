@@ -14,7 +14,7 @@ public class Board {
 	public Board() {
 		
 	 //TODO: initialise the cells array using ROWS and COLS constants 
-
+        cells=new Cell[GameMain.ROWS][GameMain.COLS];
 		
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
@@ -25,11 +25,12 @@ public class Board {
 	
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
+	
 	public boolean isDraw() {
 		
 		for (int row = 0; row < GameMain.ROWS; ++row) {
-			for (int col = 0; col < GameMain.COLS; ++col) {
-				if(cells[row][col].content==Player.Empty);
+			for (int col = 0; col < GameMain.COLS;++col) {
+				if(cells[row][col].content==Player.Empty)
 				return false;
 			}
 			
