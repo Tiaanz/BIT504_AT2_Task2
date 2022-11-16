@@ -18,7 +18,7 @@ public class Cell {
 		
 	
 		//TODO: call the method that sets the cell content to EMPTY
-         	clear();
+         	 clear();
 	}
 	
 
@@ -46,9 +46,8 @@ public class Cell {
 	/** Set this cell's content to EMPTY */
 	public void clear() {
 		
-		this.content=Player.Empty;
 		// TODO: Set the value of content to Empty (Remember this is an enum)
-
+		this.content=Player.Empty;
 		
 	}
 		

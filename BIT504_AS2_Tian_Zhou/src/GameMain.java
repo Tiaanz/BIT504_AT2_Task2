@@ -67,9 +67,6 @@ public class GameMain extends JPanel implements MouseListener{
 	public static void main(String[] args) {
 		    // Run GUI code in Event Dispatch thread for thread safety.
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
-	        
-
-			
 
 			public void run() {
 				//create a main window to contain the panel
@@ -89,6 +86,7 @@ public class GameMain extends JPanel implements MouseListener{
 	         }
 		 });
 	}
+
 	/** Custom painting codes on this JPanel */
 	public void paintComponent(Graphics g) {
 		//fill background and set colour to white
@@ -124,9 +122,8 @@ public class GameMain extends JPanel implements MouseListener{
 			}
 		}
 		
-	
-	  /** Initialise the game-board contents and the current status of GameState and Player) */
-		public void initGame() {
+	/** Initialise the game-board contents and the current status of GameState and Player) */
+	public void initGame() {
 			for (int row = 0; row < ROWS; ++row) {          
 				for (int col = 0; col < COLS; ++col) {  
 					// all cells empty
@@ -137,13 +134,12 @@ public class GameMain extends JPanel implements MouseListener{
 			 currentPlayer = Player.Cross;
 		}
 		
-		
-		/**After each turn check to see if the current player hasWon by putting their symbol in that position, 
+	/**After each turn check to see if the current player hasWon by putting their symbol in that position, 
 		 * If they have the GameState is set to won for that player
 		 * If no winner then isDraw is called to see if deadlock, if not GameState stays as PLAYING
 		 *   
-		 */
-		public void updateGame(Player thePlayer, int row, int col) {
+	*/
+	public void updateGame(Player thePlayer, int row, int col) {
 			//check for win after play
 			if(board.hasWon(thePlayer, row, col)) {
 				
@@ -165,8 +161,6 @@ public class GameMain extends JPanel implements MouseListener{
 			//otherwise no change to current state of playing
 		}
 		
-				
-	
 		/** Event handler for the mouse click on the JPanel. If selected cell is valid and Empty then current player is added to cell content.
 		 *  UpdateGame is called which will call the methods to check for winner or Draw. if none then GameState remains playing.
 		 *  If win or Draw then call is made to method that resets the game board.  Finally a call is made to refresh the canvas so that new symbol appears*/
